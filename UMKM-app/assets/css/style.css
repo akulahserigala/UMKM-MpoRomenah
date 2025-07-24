@@ -1,0 +1,120 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #4CAF50 !important; /* Hijau Daun */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: white !important;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+/* Judul Halaman */
+h3 {
+  margin-bottom: 20px;
+  color: #B23B3B; /* Merah Bata */
+}
+
+/* Kartu Produk */
+.card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #B23B3B;
+}
+
+.card-text {
+  color: #666;
+}
+
+/* Tombol */
+.btn-primary {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+.btn-primary:hover {
+  background-color: #45a049;
+}
+
+.btn-success {
+  background-color: #B23B3B;
+  border-color: #B23B3B;
+}
+
+.btn-success:hover {
+  background-color: #a13333;
+}
+
+.btn-secondary {
+  background-color: #F0C674;
+  color: #333;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #e6b94e;
+}
+
+.btn, input, textarea {
+  border-radius: 6px;
+}
+
+/* Tabel Checkout */
+table.table th, table.table td {
+  vertical-align: middle !important;
+}
+
+tfoot tr th {
+  background-color: #f0f0f0;
+}
+
+/* Container responsif */
+.container {
+  max-width: 960px;
+}
+
+/* Footer */
+.footer {
+  background-color: #f8cbd1;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 40px;
+}
+.footer p {
+  margin: 0;
+  color: white;
+}

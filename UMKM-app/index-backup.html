@@ -1,0 +1,41 @@
+<?php
+include 'config/db.php';
+$produk = mysqli_query($conn, "SELECT * FROM tb_product ORDER BY product_id DESC");
+?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Beranda - Dapur Kue Betawi Mpo Romenah</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<?php include 'navbar.php'; ?>
+
+
+<!-- Konten -->
+<div class="container mt-5">
+  <h3 class="text-center">Daftar Produk</h3>
+  
+  <div class="row">
+    <?php while ($p = mysqli_fetch_assoc($produk)) { ?>
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="img/<?= $p['product_image'] ?>" class="card-img-top" alt="<?= $p['product_name'] ?>">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title"><?= $p['product_name'] ?></h5>
+          <p class="card-text">Rp<?= number_format($p['product_price']) ?></p>
+          <a href="detail_produk.php?id=<?= $p['product_id'] ?>" class="btn btn-primary mt-auto">Lihat Detail</a>
+        </div>
+      </div>
+    </div>
+    <?php } ?>
+  </div>
+</div>
+
+</body>
+</html>
